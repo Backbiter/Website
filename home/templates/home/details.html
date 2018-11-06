@@ -1,2 +1,9 @@
-<h3>DETAILS</h3>
-<h4>{{ album }}</h4>
+<h1>{{ album.album_title }}</h1>
+<h2>Artist :: {{ album.artist }}</h2>
+<h4>All the Songs in {{ album.album_title }}</h4>
+
+<u1>
+    {% for song in album.song_set.all %}
+        <li>{{ song.song_title }} ----- {{ song.file_type }}</li>
+    {% endfor %}
+</u1>

@@ -19,4 +19,4 @@ def details(request, album_id):
         album = Album.objects.get(pk=album_id)
     except Album.DoesNotExist:
         raise Http404("Album Not found")
-    return render(request, 'home/details.html',{'album': album})
+    return render(request, 'home/details.html', {'album': album})
