@@ -1,0 +1,10 @@
+{% if album_all %}
+<h3>MUSIC</h3>
+<u1>
+    {% for album in album_all %}
+    <li><a href="/home/{{ album.id }}/">{{ album.album_title }}</a></li>
+    {% endfor %}
+</u1>
+{% else %}
+    <h3>ADD ALBUMS</h3>
+{% endif %}
